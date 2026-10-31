@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>let’s go play sh.k</title>
+<style>
+:root{--pink:#E9BFD7;--green:#CDE8D7;--bg:#FFF8F5;--ink:#493B45}
+*{box-sizing:border-box}body{margin:0;font-family:'Trebuchet MS','Segoe UI',sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:24px 6vw}.nav{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand{font-weight:900;font-size:18px}.brand span,h1 em{color:#B66D98}.pill{border:1px solid #E9D8E1;border-radius:99px;padding:9px 14px;font-size:12px;background:#fff}
+.hero{max-width:1120px;margin:auto;padding:55px 6vw 42px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:25px}.eyebrow{display:inline-block;background:var(--green);border-radius:99px;padding:8px 13px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-3px;margin:18px 0}h1 em{font-style:normal}.hero p{max-width:520px;line-height:1.7;color:#776874}.game-window{width:min(100%,320px);aspect-ratio:1.15;background:linear-gradient(145deg,#F8DDEB,#E1F1E5);border:8px solid white;border-radius:34px;display:grid;place-items:center;margin:auto;transform:rotate(3deg);box-shadow:0 18px 45px #9F71851C}.controller{font-size:95px}
+.section{max-width:1120px;margin:auto;padding:18px 6vw 65px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}h2{font-size:29px;margin:0 0 6px}.sub{color:#8A7A85;font-size:13px;margin:0}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}input,select{font:inherit;border:1px solid #EADCE3;border-radius:14px;background:white;padding:12px 14px;color:var(--ink)}input{flex:1;min-width:190px}select{min-width:145px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid #F0E4EA;border-radius:22px;padding:16px;box-shadow:0 9px 25px #A8799110;display:flex;flex-direction:column;min-height:265px}.card-top{display:flex;align-items:center;gap:14px}.game-icon{width:62px;height:62px;flex:0 0 62px;border-radius:18px;display:grid;place-items:center;font-size:32px;background:#F8E5EF}.card:nth-child(2n) .game-icon{background:#E5F3E9}.card h3{margin:0 0 5px;font-size:18px}.tag{color:#A06D8C;font-size:11px;font-weight:bold;text-transform:uppercase}.card p{color:#7E707A;font-size:13px;line-height:1.55;margin:14px 0 18px;flex:1}.card-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.platform{font-size:11px;color:#8B7B85}a.download{display:inline-block;text-decoration:none;border-radius:99px;padding:10px 15px;background:var(--pink);color:#48283C;font-size:12px;font-weight:900}.note{margin-top:24px;padding:16px 18px;border-radius:18px;background:#EEF6F0;color:#45634F;font-size:12px;line-height:1.6}footer{border-top:1px solid #F0E4EA;text-align:center;padding:22px;font-size:12px;color:#988994}
+@media(max-width:680px){.hero{grid-template-columns:1fr;padding-top:40px}.game-window{width:230px}.controller{font-size:78px}.section-head{align-items:start;flex-direction:column}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">let’s go play <span>sh.k</span> ✿</div><div class="pill">♡ a little corner for big fun</div></div></header>
+<main>
+<section class="hero"><div><span class="eyebrow">✦ discover your next game</span><h1>Ready, set,<br><em>let’s play!</em></h1><p>A cute little collection of free games for iPhone, iPad and PC. Choose the download link made for your device.</p></div><div class="game-window"><span class="controller">🎮</span></div></section>
+<section class="section" id="games">
+<div class="section-head"><div><h2>Pick your game 🌷</h2><p class="sub">Free games · official links · iPhone · iPad · PC</p></div><div class="pill">5 games to explore</div></div>
+<div class="tools"><input id="search" type="search" placeholder="Search games…" aria-label="Search games"><select id="category" aria-label="Filter by category"><option value="all">All categories</option><option value="racing">Racing</option><option value="adventure">Adventure</option><option value="strategy">Strategy</option><option value="building">Building</option></select></div>
+<div class="grid" id="gameGrid">
+<article class="card" data-name="supertuxkart" data-category="racing"><div class="card-top"><div class="game-icon">🏎️</div><div><div class="tag">Racing</div><h3>SuperTuxKart</h3></div></div><p>A cheerful kart-racing game with fun tracks, characters and power-ups.</p><div class="card-actions"><span class="platform">Windows · macOS · Linux</span><a class="download" href="https://supertuxkart.net/Download" target="_blank" rel="noopener noreferrer">Download ↗</a></div></article>
+<article class="card" data-name="luanti" data-category="building"><div class="card-top"><div class="game-icon">🧱</div><div><div class="tag">Building</div><h3>Luanti</h3></div></div><p>Explore and build in open worlds, with community-made games and creative possibilities.</p><div class="card-actions"><span class="platform">Windows · macOS · Linux</span><a class="download" href="https://www.luanti.org/downloads/" target="_blank" rel="noopener noreferrer">Download ↗</a></div></article>
+<article class="card" data-name="openttd" data-category="strategy"><div class="card-top"><div class="game-icon">🚂</div><div><div class="tag">Strategy</div><h3>OpenTTD</h3></div></div><p>Plan transport routes and grow your own colourful transport network.</p><div class="card-actions"><span class="platform">Windows · macOS · Linux</span><a class="download" href="https://www.openttd.org/downloads/openttd-releases/latest" target="_blank" rel="noopener noreferrer">Download ↗</a></div></article>
+<article class="card" data-name="0 a.d." data-category="adventure strategy"><div class="card-top"><div class="game-icon">🏛️</div><div><div class="tag">Adventure · Strategy</div><h3>0 A.D.</h3></div></div><p>A historical real-time strategy game where you build a civilization and explore history.</p><div class="card-actions"><span class="platform">Windows · macOS · Linux</span><a class="download" href="https://play0ad.com/download/" target="_blank" rel="noopener noreferrer">Download ↗</a></div></article>
+<article class="card" data-name="sky children of the light" data-category="adventure"><div class="card-top"><div class="game-icon">🌌</div><div><div class="tag">Adventure · Cross-platform</div><h3>Sky: Children of the Light</h3></div></div><p>Explore dreamy worlds, solve puzzles and discover a gentle adventure. Free to start, with optional in-game purchases and online features.</p><div class="card-actions"><span class="platform">iPhone · iPad · PC</span><div style="display:flex;gap:7px;flex-wrap:wrap"><a class="download" href="https://apps.apple.com/us/app/sky-children-of-the-light/id1462117269" target="_blank" rel="noopener noreferrer">App Store ↗</a><a class="download" href="https://store.steampowered.com/app/2325290/Sky_Children_of_the_Light/" target="_blank" rel="noopener noreferrer">PC ↗</a></div></div></article>
+</div><div class="note"><strong>Little safety reminder 💗</strong><br>Use the App Store link for iPhone/iPad and the Steam or official website link for PC. Some games include online features or optional purchases. Ask a parent or trusted adult before installing or buying anything, and avoid pop-ups or download buttons on other websites.</div>
+</section></main>
+<footer>Made with ♡ by sh.k · Have fun and play safe!</footer>
+<script>
+const search=document.getElementById('search'),category=document.getElementById('category'),cards=[...document.querySelectorAll('.card')];
+function filterGames(){const q=search.value.trim().toLowerCase(),c=category.value;let visible=0;cards.forEach(card=>{const show=(card.dataset.name.includes(q)||card.innerText.toLowerCase().includes(q))&&(c==='all'||card.dataset.category.split(' ').includes(c));card.style.display=show?'flex':'none';if(show)visible++;});}
+search.addEventListener('input',filterGames);category.addEventListener('change',filterGames);
+</script>
+</body>
+</html>
